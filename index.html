@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LICERIA</title>
+    <link rel="icon" href="assets/logo.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">LICERIA FURNITURE</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <!-- home page nav -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="html/item.html">Items</a>
+            </li> -->
+
+            <!-- customer nav dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Customer
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Registered Customer</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Unregistered Customer</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Find Customer</a></li>
+                <li><a class="dropdown-item" href="#">Update Customer</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">View Customer</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- items nav dropdown  -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Items
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Add Items</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Find Items</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Remove Items</a></li>
+                <li><a class="dropdown-item" href="#">Update Items</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">View Items</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- orders nav dropdown  -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Orders
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Add Orders</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Find Orders</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Remove Orders</a></li>
+                <li><a class="dropdown-item" href="#">Update Orders</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">View Orders</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- placed orders  -->
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="/html/place-order.html"
+                >Placed Orders</a
+              >
+            </li>
+
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Link</a>
+            </li> -->
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="position-absolute">
+      <!-- carousel  -->
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://media.gettyimages.com/id/1285065780/photo/furniture-showroom-with-plants-spotlights-and-brick-wall.jpg?s=612x612&w=0&k=20&c=5X2jXOu4kAEW978_fNmdLGcnyqFjyl06Z-WDlX_FDVU="
+              class="d-block w-100"
+              alt="image-1"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://media.istockphoto.com/id/178242631/photo/stylish-furniture.jpg?s=612x612&w=0&k=20&c=NenjIbeefZEDh4X9H8DgScVRmjAynC-ep62w_CtrSvQ="
+              class="d-block w-100"
+              alt="image-2"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://media.istockphoto.com/id/1336665596/photo/thinking-about-their-purchase.jpg?s=612x612&w=0&k=20&c=YrpZXSZTjD5r0qkovADO4IScuYNE0oxY_amK9RWX33o="
+              class="d-block w-100"
+              alt="image-3"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1670076513880-f58e3c377903?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZnVybml0dXJlfGVufDB8fDB8fHww"
+              class="d-block w-100"
+              alt="image-4"
+            />
+          </div>
+        </div>
+        <div class="position-absolute top-50 start-50 translate-middle">
+          <!-- headings  -->
+          <main>
+            <h2 class="text-center fw-bold">WELCOME</h2>
+            <h3 class="text-center fst-italic">TO</h3>
+            <h1 class="display-1 text-center fw-bold">LICERIA FURNITURE</h1>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <!-- boostrap linked on  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

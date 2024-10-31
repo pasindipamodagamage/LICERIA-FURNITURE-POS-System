@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LICERIA</title>
+    <link rel="icon" href="/assets/logo.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --accent-color: #ffbd73;
+        --highlight-color: #ff9d3d;
+        --form-border-color: #de8f5f;
+        --button-border-color: #ff9d3d;
+      }
+
+      .navbar-brand img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        margin-right: 10px;
+      }
+
+      .btn-add {
+        background-color: var(--highlight-color);
+        color: white;
+        border: 1px solid var(--button-border-color);
+      }
+      .btn-update {
+        background-color: var(--accent-color);
+        color: white;
+        border: 1px solid var(--button-border-color);
+      }
+      .btn-remove {
+        background-color: #feee91;
+        color: black;
+        border: 1px solid var(--button-border-color);
+      }
+
+      .form-container {
+        border: 2px solid var(--highlight-color);
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-control {
+        border: 1px solid var(--form-border-color);
+      }
+      .form-control:focus {
+        border-color: var(--highlight-color);
+        box-shadow: none;
+      }
+
+      .table-container {
+        overflow-x: auto;
+        border: 1px solid #e5e5e5;
+        border-radius: 10px;
+        padding: 15px;
+      }
+      .table-striped > tbody > tr:nth-of-type(odd) {
+        --bs-table-accent-bg: #ffe2c2;
+      }
+      .table-striped > tbody > tr:hover {
+        background-color: #ffddaa;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- nav bar -->
+    <section>
+      <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <!-- Logo and Brand Name -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+              <img src="/assets/logo.png" alt="logo" />
+              LICERIA FURNITURE
+            </a>
+
+            <!-- Search Form -->
+            <form class="d-flex me-auto ms-3" role="search">
+              <input
+                class="form-control me-2 customer-search-box"
+                type="search"
+                placeholder="Search Customer"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+
+            <!-- Navbar Toggle for Mobile View -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarScroll"
+              aria-controls="navbarScroll"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Items -->
+            <div class="collapse navbar-collapse" id="navbarScroll">
+              <ul
+                class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll"
+                style="--bs-scroll-height: 100px"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="/index.html"
+                    >Home</a
+                  >
+                </li>
+
+                <!-- customer nav dropdown -->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="/html/customer.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Customer
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/html/customer.html#customer-add"
+                        >Registered Customer</a
+                      >
+                    </li>
+
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/html/customer.html#customer-search-box"
+                        >Find Customer</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/html/customer.html#customer-update"
+                        >Update Customer</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/html/customer.html#customer-remove"
+                        >Remove Customer</a
+                      >
+                    </li>
+
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/html/customer.html#customer-view"
+                        >View Customer</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <!-- items nav dropdown  -->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Items
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">Add Items</a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/html/item.html#item-search-box"
+                        >Find Items</a
+                      >
+                    </li>
+                    <li><a class="dropdown-item" href="#">Update Items</a></li>
+                    <li><a class="dropdown-item" href="#">Remove Items</a></li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="/html/item.html#item-view"
+                        >View Items</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <!-- orders nav dropdown  -->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Orders
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">Add Orders</a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/html/order.html#order-search-box"
+                        >Find Orders</a
+                      >
+                    </li>
+                    <li><a class="dropdown-item" href="#">Remove Orders</a></li>
+                    <li><a class="dropdown-item" href="#">Update Orders</a></li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/html/order.html#order-view"
+                        >View Orders</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <!-- placed orders  -->
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="/html/place-order.html"
+                    >Placed Orders</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </section>
+
+    <section id="customer-add" class="p-4">
+      <h2>Customer Registration</h2>
+      <div class="form-container">
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label for="nicNumber" class="form-label">NIC Number</label>
+            <input type="text" class="form-control" id="nicNumber" required />
+          </div>
+          <div class="col-md-6">
+            <label for="customerName" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="customerName"
+              required
+            />
+          </div>
+          <div class="col-md-3">
+            <label for="streetNumber" class="form-label">Street Number</label>
+            <input
+              type="text"
+              class="form-control"
+              id="streetNumber"
+              required
+            />
+          </div>
+          <div class="col-md-3">
+            <label for="street" class="form-label">Street</label>
+            <input type="text" class="form-control" id="street" required />
+          </div>
+          <div class="col-md-3">
+            <label for="city" class="form-label">City</label>
+            <input type="text" class="form-control" id="city" required />
+          </div>
+          <div class="col-md-3">
+            <label for="province" class="form-label">Province</label>
+            <input type="text" class="form-control" id="province" required />
+          </div>
+          <div class="col-md-6">
+            <label for="contactNumber" class="form-label">Contact Number</label>
+            <input
+              type="text"
+              class="form-control"
+              id="contactNumber"
+              required
+            />
+          </div>
+          <div class="col-12">
+            <button class="btn btn-add me-2" type="button">Add Customer</button>
+            <button class="btn btn-update me-2 #customer-update" type="button">
+              Update Customer
+            </button>
+            <button class="btn btn-remove #customer-remove" type="button">
+              Remove Customer
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="customer-view" class="p-4">
+      <h2>Customer List</h2>
+      <div class="table-container">
+        <table class="table table-striped">
+          <thead class="table-dark">
+            <tr>
+              <th>NIC</th>
+              <th>Name</th>
+              <th>Street Number</th>
+              <th>Street</th>
+              <th>City</th>
+              <th>Province</th>
+              <th>Contact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>200263701789</td>
+              <td>Pasindi Gamage</td>
+              <td>12</td>
+              <td>Main St</td>
+              <td>Baddegama</td>
+              <td>Galle</td>
+              <td>0773793942</td>
+            </tr>
+            <tr>
+              <td>200263701782</td>
+              <td>Induwara Gamage</td>
+              <td>15</td>
+              <td>2nd Ave</td>
+              <td>Pallekele</td>
+              <td>Kandy</td>
+              <td>0773793892</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

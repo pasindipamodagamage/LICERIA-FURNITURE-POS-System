@@ -68,6 +68,13 @@
       .table-striped > tbody > tr:hover {
         background-color: #ffddaa;
       }
+      footer {
+        background: #262626;
+        color: wheat;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 1.2rem;
+      }
     </style>
   </head>
   <body>
@@ -85,9 +92,9 @@
             <!-- Search Form -->
             <form class="d-flex me-auto ms-3" role="search">
               <input
-                class="form-control me-2 customer-search-box"
+                class="form-control me-2 item-search-box"
                 type="search"
-                placeholder="Search Item"
+                placeholder="Search Items"
                 aria-label="Search"
               />
               <button class="btn btn-outline-success" type="submit">
@@ -123,11 +130,11 @@
                   >
                 </li>
 
-                <!-- Customer Dropdown -->
+                <!-- customer nav dropdown -->
                 <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle"
-                    href="#"
+                    href="/html/customer.html"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -142,27 +149,29 @@
                         >Registered Customer</a
                       >
                     </li>
+
                     <li>
                       <a
                         class="dropdown-item"
-                        href="/html/customer.html#customer-search-box"
+                        href="/html/customer.htm.customer-search-box"
                         >Find Customer</a
                       >
                     </li>
                     <li>
                       <a
                         class="dropdown-item"
-                        href="/html/customer.html#customer-update"
+                        href="/html/customer.html.customer-update"
                         >Update Customer</a
                       >
                     </li>
                     <li>
                       <a
                         class="dropdown-item"
-                        href="/html/customer.html#customer-remove"
+                        href="/html/customer.html.customer-remove"
                         >Remove Customer</a
                       >
                     </li>
+
                     <li><hr class="dropdown-divider" /></li>
                     <li>
                       <a
@@ -174,11 +183,11 @@
                   </ul>
                 </li>
 
-                <!-- Items Dropdown -->
+                <!-- items nav dropdown  -->
                 <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle"
-                    href="#"
+                    href="/html/item.html"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -186,16 +195,32 @@
                     Items
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Add Items</a></li>
+                    <li>
+                      <a class="dropdown-item" href="/html/item.html#item-add"
+                        >Add Items</a
+                      >
+                    </li>
                     <li>
                       <a
                         class="dropdown-item"
-                        href="/html/item.html#item-search-box"
+                        href="/html/item.html.item-search-box"
                         >Find Items</a
                       >
                     </li>
-                    <li><a class="dropdown-item" href="#">Update Items</a></li>
-                    <li><a class="dropdown-item" href="#">Remove Items</a></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/html/item.html.item-update"
+                        >Update Items</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/html/item.html.item-remove"
+                        >Remove Items</a
+                      >
+                    </li>
                     <li><hr class="dropdown-divider" /></li>
                     <li>
                       <a class="dropdown-item" href="/html/item.html#item-view"
@@ -205,11 +230,11 @@
                   </ul>
                 </li>
 
-                <!-- Orders Dropdown -->
+                <!-- orders nav dropdown  -->
                 <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle"
-                    href="#"
+                    href="/html/order.html"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -217,16 +242,27 @@
                     Orders
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Add Orders</a></li>
                     <li>
                       <a
                         class="dropdown-item"
-                        href="/html/order.html#order-search-box"
+                        href="/html/order.html.order-search-box"
                         >Find Orders</a
                       >
                     </li>
-                    <li><a class="dropdown-item" href="#">Remove Orders</a></li>
-                    <li><a class="dropdown-item" href="#">Update Orders</a></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/html/order.html.order-remove"
+                        >Remove Orders</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/html/order.html.order-update"
+                        >Update Orders</a
+                      >
+                    </li>
                     <li><hr class="dropdown-divider" /></li>
                     <li>
                       <a
@@ -238,9 +274,12 @@
                   </ul>
                 </li>
 
-                <!-- Placed Orders -->
+                <!-- placed orders  -->
                 <li class="nav-item">
-                  <a class="nav-link active" href="/html/place-order.html"
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="/html/place-order.html#place-order"
                     >Placed Orders</a
                   >
                 </li>
@@ -317,7 +356,15 @@
         </table>
       </div>
     </section>
-
+    <!-- footer  -->
+    <section id="footer">
+      <footer>
+        <p>
+          Copyright © 2024 - All Rights Reserved |
+          <i>developed by❤️ Pasindi Pamoda Gamage</i>
+        </p>
+      </footer>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

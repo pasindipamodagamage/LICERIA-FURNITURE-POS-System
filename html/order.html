@@ -68,20 +68,31 @@
       .table-striped > tbody > tr:hover {
         background-color: #ffddaa;
       }
+      footer {
+        background: #262626;
+        color: wheat;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 1.2rem;
+      }
     </style>
   </head>
   <body>
+    <!-- nav bar -->
     <section>
       <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
+            <!-- Logo and Brand Name -->
             <a class="navbar-brand d-flex align-items-center" href="index.html">
               <img src="/assets/logo.png" alt="logo" />
               LICERIA FURNITURE
             </a>
+
+            <!-- Search Form -->
             <form class="d-flex me-auto ms-3" role="search">
               <input
-                class="form-control me-2 search-box"
+                class="form-control me-2 order-search-box"
                 type="search"
                 placeholder="Search Order"
                 aria-label="Search"
@@ -90,6 +101,8 @@
                 Search
               </button>
             </form>
+
+            <!-- Navbar Toggle for Mobile View -->
             <button
               class="navbar-toggler"
               type="button"
@@ -101,6 +114,8 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Navbar Items -->
             <div class="collapse navbar-collapse" id="navbarScroll">
               <ul
                 class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll"
@@ -114,6 +129,8 @@
                     >Home</a
                   >
                 </li>
+
+                <!-- customer nav dropdown -->
                 <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle"
@@ -121,8 +138,9 @@
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    >Customer</a
                   >
+                    Customer
+                  </a>
                   <ul class="dropdown-menu">
                     <li>
                       <a
@@ -131,27 +149,29 @@
                         >Registered Customer</a
                       >
                     </li>
+
                     <li>
                       <a
                         class="dropdown-item"
-                        href="/html/customer.html#customer-search-box"
+                        href="/html/customer.htm.customer-search-box"
                         >Find Customer</a
                       >
                     </li>
                     <li>
                       <a
                         class="dropdown-item"
-                        href="/html/customer.html#customer-update"
+                        href="/html/customer.html.customer-update"
                         >Update Customer</a
                       >
                     </li>
                     <li>
                       <a
                         class="dropdown-item"
-                        href="/html/customer.html#customer-remove"
+                        href="/html/customer.html.customer-remove"
                         >Remove Customer</a
                       >
                     </li>
+
                     <li><hr class="dropdown-divider" /></li>
                     <li>
                       <a
@@ -162,6 +182,8 @@
                     </li>
                   </ul>
                 </li>
+
+                <!-- items nav dropdown  -->
                 <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle"
@@ -169,8 +191,9 @@
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    >Items</a
                   >
+                    Items
+                  </a>
                   <ul class="dropdown-menu">
                     <li>
                       <a class="dropdown-item" href="/html/item.html#item-add"
@@ -206,6 +229,8 @@
                     </li>
                   </ul>
                 </li>
+
+                <!-- orders nav dropdown  -->
                 <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle"
@@ -213,13 +238,14 @@
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    >Orders</a
                   >
+                    Orders
+                  </a>
                   <ul class="dropdown-menu">
                     <li>
                       <a
                         class="dropdown-item"
-                        href="/html/order.html#order-search-box"
+                        href="/html/order.html.order-search-box"
                         >Find Orders</a
                       >
                     </li>
@@ -247,11 +273,13 @@
                     </li>
                   </ul>
                 </li>
+
+                <!-- placed orders  -->
                 <li class="nav-item">
                   <a
                     class="nav-link active"
                     aria-current="page"
-                    href="/html/place-order.html"
+                    href="/html/place-order.html#place-order"
                     >Placed Orders</a
                   >
                 </li>
@@ -337,7 +365,15 @@
         </table>
       </div>
     </section>
-
+    <!-- footer  -->
+    <section id="footer">
+      <footer>
+        <p>
+          Copyright © 2024 - All Rights Reserved |
+          <i>developed by❤️ Pasindi Pamoda Gamage</i>
+        </p>
+      </footer>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

@@ -10,6 +10,13 @@
       rel="stylesheet"
     />
     <style>
+      footer {
+        background: #262626;
+        color: wheat;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 1.2rem;
+      }
       :root {
         --accent-color: #ffbd73;
         --highlight-color: #ff9d3d;
@@ -87,7 +94,7 @@
               <input
                 class="form-control me-2 customer-search-box"
                 type="search"
-                placeholder="Search Customer"
+                placeholder="Search Items"
                 aria-label="Search"
               />
               <button class="btn btn-outline-success" type="submit">
@@ -146,21 +153,21 @@
                     <li>
                       <a
                         class="dropdown-item"
-                        href="/html/customer.html#customer-search-box"
+                        href="/html/customer.htm.customer-search-box"
                         >Find Customer</a
                       >
                     </li>
                     <li>
                       <a
                         class="dropdown-item"
-                        href="/html/customer.html#customer-update"
+                        href="/html/customer.html.customer-update"
                         >Update Customer</a
                       >
                     </li>
                     <li>
                       <a
                         class="dropdown-item"
-                        href="/html/customer.html#customer-remove"
+                        href="/html/customer.html.customer-remove"
                         >Remove Customer</a
                       >
                     </li>
@@ -180,7 +187,7 @@
                 <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle"
-                    href="#"
+                    href="/html/item.html"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -189,17 +196,31 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li>
-                      <a class="dropdown-item" href="#">Add Items</a>
+                      <a class="dropdown-item" href="/html/item.html#item-add"
+                        >Add Items</a
+                      >
                     </li>
                     <li>
                       <a
                         class="dropdown-item"
-                        href="/html/item.html#item-search-box"
+                        href="/html/item.html.item-search-box"
                         >Find Items</a
                       >
                     </li>
-                    <li><a class="dropdown-item" href="#">Update Items</a></li>
-                    <li><a class="dropdown-item" href="#">Remove Items</a></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/html/item.html.item-update"
+                        >Update Items</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/html/item.html.item-remove"
+                        >Remove Items</a
+                      >
+                    </li>
                     <li><hr class="dropdown-divider" /></li>
                     <li>
                       <a class="dropdown-item" href="/html/item.html#item-view"
@@ -213,7 +234,7 @@
                 <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle"
-                    href="#"
+                    href="/html/order.html"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -222,17 +243,26 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li>
-                      <a class="dropdown-item" href="#">Add Orders</a>
+                      <a
+                        class="dropdown-item"
+                        href="/html/order.html.order-search-box"
+                        >Find Orders</a
+                      >
                     </li>
                     <li>
                       <a
                         class="dropdown-item"
-                        href="/html/order.html#order-search-box"
-                        >Find Orders</a
+                        href="/html/order.html.order-remove"
+                        >Remove Orders</a
                       >
                     </li>
-                    <li><a class="dropdown-item" href="#">Remove Orders</a></li>
-                    <li><a class="dropdown-item" href="#">Update Orders</a></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/html/order.html.order-update"
+                        >Update Orders</a
+                      >
+                    </li>
                     <li><hr class="dropdown-divider" /></li>
                     <li>
                       <a
@@ -249,7 +279,7 @@
                   <a
                     class="nav-link active"
                     aria-current="page"
-                    href="/html/place-order.html"
+                    href="/html/place-order.html#place-order"
                     >Placed Orders</a
                   >
                 </li>
@@ -309,10 +339,10 @@
           </div>
           <div class="col-12">
             <button class="btn btn-add me-2" type="button">Add Customer</button>
-            <button class="btn btn-update me-2 #customer-update" type="button">
+            <button class="btn btn-update me-2 customer-update" type="button">
               Update Customer
             </button>
-            <button class="btn btn-remove #customer-remove" type="button">
+            <button class="btn btn-remove .customer-remove" type="button">
               Remove Customer
             </button>
           </div>
@@ -358,7 +388,15 @@
         </table>
       </div>
     </section>
-
+    <!-- footer  -->
+    <section id="footer">
+      <footer>
+        <p>
+          Copyright © 2024 - All Rights Reserved |
+          <i>developed by❤️ Pasindi Pamoda Gamage</i>
+        </p>
+      </footer>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
